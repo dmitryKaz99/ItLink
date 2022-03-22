@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap");
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Fredoka", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: font-weight 0.2s linear;
+
+  &:hover {
+    color: inherit;
+    font-weight: 500;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
