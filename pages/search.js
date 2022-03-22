@@ -3,9 +3,11 @@ import MyFormSearch from "../components/common/Form/MyFormSearch";
 import IsEmptyItems from "../components/common/Items/IsEmptyItems";
 import ApiServices from "../API/ApiServices";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const Search = ({ todos }) => {
   const router = useRouter();
+  useEffect(() => router.push("/search"), []);
 
   return (
     <HeaderContainer banner={"search"} title={"Search page"}>
