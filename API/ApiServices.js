@@ -18,7 +18,7 @@ export default class ApiServices {
   }
 
   static async getTodos(searchTitle) {
-    const queryParams = searchTitle ? `todos?title=${searchTitle}` : `todos`;
+    const queryParams = searchTitle ? `todos?q=${searchTitle}` : `todos`;
 
     const { data } = await axios.get(BASE_URL + queryParams);
     return data;

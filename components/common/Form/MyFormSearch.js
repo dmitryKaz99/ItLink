@@ -22,7 +22,7 @@ const MyFormSearch = ({ router }) => {
             {...register("title", {
               required: "Required field",
             })}
-            placeholder="todos on full title..."
+            placeholder="todos on title..."
           />
           {errors?.title && (
             <p className="mt-1 text-primary">{errors?.title?.message}</p>
