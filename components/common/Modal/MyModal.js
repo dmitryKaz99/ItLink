@@ -6,9 +6,9 @@ const MyModal = ({ children, visible, setVisible }) => {
   if (visible) rootClasses.push(s.active_modal);
 
   useEffect(() => {
-    document.body.classList.add("active_body");
+    if (visible) document.body.classList.add("active_body");
     return () => document.body.classList.remove("active_body");
-  }, [visible]);
+  }, [(visible = true)]);
 
   return (
     <div className={rootClasses.join(" ")} onClick={setVisible}>
