@@ -7,11 +7,11 @@ const MyPagination = ({ totalCount, limit, currentPage, setCurrentPage }) => {
   for (let i = 1; i <= pagesCount; i++) pages.push(i);
 
   return (
-    <div className="d-flex justify-content-center my-4">
+    <div className="d-flex flex-wrap justify-content-center my-4">
       {pages.map((p) => (
         <Button
           key={p}
-          className={currentPage === p ? "btn-danger mx-1" : "mx-1"}
+          className={currentPage === p ? "btn-danger m-1" : "m-1"}
           onClick={() => setCurrentPage(p)}
         >
           {p}

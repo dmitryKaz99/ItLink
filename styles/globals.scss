@@ -1,11 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap");
 @import "bootstrap/dist/css/bootstrap.min.css";
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
+}
+body {
   font-family: "Fredoka", sans-serif;
+  overflow-y: scroll;
 }
 
 a {
@@ -17,8 +24,4 @@ a {
     color: inherit;
     font-weight: 500;
   }
-}
-
-* {
-  box-sizing: border-box;
 }

@@ -20,6 +20,10 @@ const MyFormSearch = ({ router }) => {
           <Form.Label>Search</Form.Label>
           <Form.Control
             {...register("title", {
+              pattern: {
+                value: /[A-Za-z0-9]/,
+                message: "Only 'en' words or numbers",
+              },
               required: "Required field",
             })}
             placeholder="todos on title..."

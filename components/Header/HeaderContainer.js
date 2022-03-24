@@ -1,6 +1,5 @@
 import Head from "next/head";
 import MyLink from "../common/Link/MyLink";
-// import routes from "./routesHeader";
 import { useRouter } from "next/router";
 import { Navbar, Container, Nav } from "react-bootstrap";
 
@@ -22,24 +21,30 @@ const HeaderContainer = ({ children, banner, title }) => {
         <title>{banner}</title>
       </Head>
 
-      <Navbar bg="light" style={{ height: "60px" }} className="flex-wrap">
-        <Container>
-          <div className="fs-3">
-            <MyLink href={"/"} text={"Home"} router={router} />
-          </div>
+      <div className="pb-5">
+        <Navbar
+          bg="light"
+          style={{ height: "60px" }}
+          className="fixed-top shadow-sm"
+        >
+          <Container>
+            <div className="fs-3">
+              <MyLink href={"/"} text={"Home"} router={router} />
+            </div>
 
-          <Nav className="me-auto">
-            {routes.map((r) => (
-              <MyLink
-                key={r.path}
-                href={r.path}
-                text={r.text}
-                router={router}
-              />
-            ))}
-          </Nav>
-        </Container>
-      </Navbar>
+            <Nav className="me-auto flex-wrap">
+              {routes.map((r) => (
+                <MyLink
+                  key={r.path}
+                  href={r.path}
+                  text={r.text}
+                  router={router}
+                />
+              ))}
+            </Nav>
+          </Container>
+        </Navbar>
+      </div>
 
       <Container className="d-flex justify-content-center flex-column my-5">
         <h1 className="text-center mb-4">{title}</h1>
