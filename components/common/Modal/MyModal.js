@@ -3,11 +3,11 @@ import s from "../../../styles/MyModal.module.scss";
 
 const MyModal = ({ children, visible, setVisible }) => {
   const rootClasses = [s.modal];
-  if (visible) rootClasses.push(s.active);
+  if (visible) rootClasses.push(s.active_modal);
 
   useEffect(() => {
-    if (visible) document.body.style.overflow = "hidden";
-    return () => (document.body.style.overflow = "");
+    document.body.classList.add("active_body");
+    return () => document.body.classList.remove("active_body");
   }, [visible]);
 
   return (
